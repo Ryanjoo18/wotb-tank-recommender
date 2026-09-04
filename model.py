@@ -2,13 +2,11 @@ import os
 import numpy as np
 import pandas as pd
 import requests
-from dotenv import load_dotenv
+import streamlit as st
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.preprocessing import StandardScaler
 
-load_dotenv()
-
-APPLICATION_ID = os.getenv("APPLICATION_ID")
+APPLICATION_ID = st.secrets["APPLICATION_ID"]
 
 API_URL = "https://api.wotblitz.asia/wotb/encyclopedia/vehicles/"
 
